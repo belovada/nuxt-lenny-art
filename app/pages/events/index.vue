@@ -12,6 +12,7 @@
 </template>
 
 <script setup>
+  import { ref } from 'vue'
   const list = ref([]);
 
   const URL = "http://localhost:3000/json/events.json";

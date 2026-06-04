@@ -11,7 +11,7 @@
 
       <SvgIcon
         class="more-btn__arrow"
-        name="arrow_down"
+        name="arrow"
         width="62"
         height="92"
       />
