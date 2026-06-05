@@ -3,6 +3,7 @@
     <AppIntro class="home__intro" />
     <AppOffers class="home__offers" />
     <AppAbout class="home__about" />
+    <EventsUpcoming class="home__upcoming" />
     <AppListing :moreLink="true" :grid="'column'" :url="'http://localhost:3000/json/blog.json'" v-slot="{ list }"
       title="Блог" class="home__listing">
       <ArticleCard v-for="card in list" :key="card.slug" :data="card" />
