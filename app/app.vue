@@ -18,9 +18,10 @@
       lang: () => "ru",
     },
     bodyAttrs: {
-      class: {
-        "overflow-nav": () => store.navActive
-      }
+    class: {
+        "overflow-nav": () => store.navActive,
+        overflow: () => store.getModal,
+      },
     },
     title: "Lenni Art",
     meta: [

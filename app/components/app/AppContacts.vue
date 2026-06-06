@@ -2,7 +2,7 @@
   <div class="app-contacts">
     <h1 class="section-title">контакты</h1>
     <div class="app-contacts__container">
-      <div class="app-contacts__map"></div>
+      <TheMap class="app-contacts__map" />
       <div class="app-contacts__info">
         <div class="app-contacts__adress">
           <div class="app-contacts__location">
@@ -236,8 +236,6 @@
     @media @bw500 {
       max-width: 170px;
     }
-
-
   }
 
   &__details {
