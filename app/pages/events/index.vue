@@ -1,26 +1,25 @@
 <template>
   <div class="events">
-    <AppListing title="Мероприятия" class="events__listing">
-      <EventCard
-        v-for="(card, index) in list"
-        :key="index"
-        :data="card"
-        class="app-listing__card"
-      />
+    <AppListing :moreBtn="true" :url="'http://localhost:3000/json/events.json'" v-slot="{list}" title="Мероприятия"
+      class="events__listing">
+      <EventCard v-for="(card, index) in list" :key="index" :data="card" class="app-listing__card" />
     </AppListing>
+    <EventsTable class="events__table" />
+    <AppOffers />
+    <EventsInfo />
   </div>
 </template>
 
 <script setup>
-  import { ref } from 'vue'
-  const list = ref([]);
+  // import { ref } from 'vue'
+  // const list = ref([]);
 
-  const URL = "http://localhost:3000/json/events.json";
+  // const URL = "http://localhost:3000/json/events.json";
 
-  const { data } = await useAsyncData(`events`, () => {
-    return $fetch(URL);
-  });
-  if (data?.value) list.value = data.value;
+  // const { data } = await useAsyncData(`events`, () => {
+  //   return $fetch(URL);
+  // });
+  // if (data?.value) list.value = data.value;
 </script>
 
 <style lang="less">
