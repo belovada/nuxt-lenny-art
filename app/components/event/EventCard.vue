@@ -29,7 +29,7 @@
   const date = computed(() => {
     try {
       const date = new Date(props.data.date);
-      return `${date.toLocaleDateString()} | начало ${date.toLocaleTimeString(
+      return `${date.toLocaleDateString("ru-RU")} | начало ${date.toLocaleTimeString(
         "ru-RU",
         {
           hour: "2-digit",
