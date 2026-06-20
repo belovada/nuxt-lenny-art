@@ -4,11 +4,11 @@
       <h1 class="event__title title">{{ data.title }}</h1>
 
       <div class="event__about">
-        <div class="event__info">
+        <div class="event__info1">
           <time v-if="datetime" :datetime="data.date" class="event__time">
             {{ datetime.date }}
           </time>
-          <div class="event__info-text">{{ data.location }}</div>
+          <div class="event__info1-text">{{ data.location }}</div>
         </div>
 
         <picture class="event__picture">
@@ -17,11 +17,11 @@
           <img :src="data.img" :alt="data.alt" class="event__image" />
         </picture>
 
-        <div class="event__info">
+        <div class="event__info2">
           <span v-if="datetime" class="event__time" data-caption="начало">
             {{ datetime.time }}
           </span>
-          <div class="event__info-text">{{ data.address }}</div>
+          <div class="event__info2-text">{{ data.address }}</div>
         </div>
       </div>
     </header>
@@ -190,6 +190,8 @@
       font-size: 18px;
     }
   }
+
+  &__text
 
   &__info2-text {
     display: flex;
